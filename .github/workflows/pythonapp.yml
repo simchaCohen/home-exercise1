@@ -40,7 +40,7 @@ jobs:
 import random, string import Flask , render_template, request ,session from flask_session import Session
 
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 app.secret_key = ''.join(random.choice(string.ascii_letters) for _ in range(30))
 Session(app)
 app.config['SESSION_TYPE'] = 'redis'
